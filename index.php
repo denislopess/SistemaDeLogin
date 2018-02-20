@@ -8,6 +8,11 @@
 include_once ('setting.php');
 @session_start();
 
+if(isset($_SESSION['nome']) && isset($_SESSION['usuario']) ){
+    header('Location:logado.php');
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +39,7 @@ include_once ('setting.php');
                 <input type="submit" value="Entrar">
                 <input type="hidden" name="entrar" value="login">
                 <input type="reset" value="Limpar">
+                <p><a href="cadastro.php">Ainda não possui cadastro? Clique para cadastrar-se!</a></p>
 
             </fieldset>
         </form>
