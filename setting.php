@@ -8,6 +8,6 @@
 
 
 
-$conn = new PDO('mysql:host=localhost;dbname=sistema_login','denis','denis1994');
+$conn = new PDO('mysql:host=localhost;dbname=sistema_login','root','');
 $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
