@@ -22,17 +22,26 @@ if(isset($_SESSION['nome']) && isset($_SESSION['usuario']) ){
     <head>
         <meta charset="UTF-8">
         <title>Cadastro</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     </head>
     <body>
+        <div id="body" class="well well-sm">
         <div id="cadastro">
             <form action="" method="post" enctype="multipart/form-data">
-                <p><label>Nome:</label><br> <input type="text" name="nome" placeholder="Meu nome"/></p>
-                <p><label>Usuário:</label><br> <input type="text" name="usuario" placeholder="Usuário"/></p>
-                <p><label>Senha:</label><br> <input type="password" name="senha" placeholder="************"/></p>
-                <p><input type="submit" value="Cadastrar"/></p>
+
+                <h1>Cadastrar:</h1>
+                <br>
+                <p><label>Nome:</label><br> <input type="text" name="nome" placeholder="Meu nome" class="form form-control"/></p>
+                <p><label>Usuário:</label><br> <input type="text" name="usuario" placeholder="Usuário" class="form form-control"/></p>
+                <p><label>Senha:</label><br> <input type="password" name="senha" placeholder="************" class="form form-control"/></p>
+                <input type="submit" value="Cadastrar" style="width: 120px" class="btn btn-success"/>
                 <input type="hidden" name="Cadastrar" value="register"/>
+                <input type="reset" value="Limpar" style="width: 120px" class="btn btn-default"/>
             </form>
         </div>
+        </div>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
         <?php
 

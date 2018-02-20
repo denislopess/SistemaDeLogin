@@ -20,30 +20,28 @@ if(isset($_SESSION['nome']) && isset($_SESSION['usuario']) ){
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     </head>
     <body>
+    <center>
+    <div id="body" class="well well-sm">
     <div id="login">
         <form action="#" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <legend>Sign In</legend>
-                <hr>
+
+                <h1>Entrar:</h1>
+                <p><label>Usuário:</label></br><input type="text" name="usuario" id="usuario" placeholder="Usuário" class="form form-control"/></p>
+                <p><label>Senha:</label></br><input type="password" name="senha" id="senha" placeholder="Senha" class="form form-control"/></p>
                 <br>
-                Usuário:<br>
-                <input type="text" name="usuario" id="usuario" required size="100" placeholder="Usuário">
-                <br><br>
-                Senha:<br>
-                <input type="password" name="senha" id="senha" required size="100" placeholder="Senha">
-                <br>
-                <br>
-                <hr>
-                <input type="submit" value="Entrar">
+                <input type="submit" value="Entrar" class="btn btn-success" style="width: 120px"/>
                 <input type="hidden" name="entrar" value="login">
-                <input type="reset" value="Limpar">
+                <input type="reset" value="Limpar" class="btn btn-default" style="width: 120px"/>
                 <p><a href="cadastro.php">Ainda não possui cadastro? Clique para cadastrar-se!</a></p>
 
-            </fieldset>
         </form>
     </div>
+    </div>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
     <?php
 
@@ -79,6 +77,6 @@ if(isset($_SESSION['nome']) && isset($_SESSION['usuario']) ){
 
 
     ?>
-
+    </center>
     </body>
 </html>
